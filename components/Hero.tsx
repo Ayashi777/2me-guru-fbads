@@ -1,4 +1,3 @@
-// FIX: This file was populated with a complete React component to resolve compilation errors caused by placeholder content.
 import React from 'react';
 import { InstagramIcon, FacebookIcon, TikTokIcon } from './icons/SocialIcons';
 
@@ -24,9 +23,9 @@ const Hero: React.FC = () => {
         <div className="mt-10 animate-fade-in-up animation-delay-800">
           <p className="text-xs uppercase tracking-widest text-gray-500 mb-4">Наші інструменти</p>
           <div className="flex justify-center items-center space-x-8">
-            <InstagramIcon className="h-8 w-8 text-gray-400 hover:text-white transition-colors" />
-            <FacebookIcon className="h-8 w-8 text-gray-400 hover:text-white transition-colors" />
-            <TikTokIcon className="h-8 w-8 text-gray-400 hover:text-white transition-colors" />
+            <InstagramIcon className="h-8 w-8 text-gray-400" />
+            <FacebookIcon className="h-8 w-8 text-gray-400" />
+            <TikTokIcon className="h-8 w-8 text-gray-400" />
           </div>
         </div>
       </div>
