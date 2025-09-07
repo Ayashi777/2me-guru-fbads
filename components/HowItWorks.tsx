@@ -3,8 +3,8 @@ import React from 'react';
 const steps = [
   {
     step: "01",
-    title: "Безкоштовна стратегічна сесія",
-    description: "Ми глибоко аналізуємо ваш бізнес, цільову аудиторію та конкурентів, щоб розробити індивідуальну стратегію залучення клієнтів, яка працюватиме саме для вас."
+    title: "Стратегія та фінансове планування",
+    description: "Глибоко аналізуємо ваш бізнес, визначаємо цільові фінансові показники (CAC, ROMI) та розробляємо індивідуальну стратегію залучення клієнтів."
   },
   {
     step: "02",
@@ -28,7 +28,7 @@ const HowItWorks: React.FC = () => {
     <section id="how-it-works" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold mb-4">Як ми працюємо: 4 кроки до результату</h2>
+          <h2 className="text-4xl font-extrabold mb-4">Наш процес: 4 кроки до результату</h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">Прозорий процес, націлений на отримання якісних замовлень для вашого бізнесу.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

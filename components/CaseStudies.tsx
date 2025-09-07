@@ -1,5 +1,4 @@
-// FIX: This file was populated with a complete React component to resolve compilation errors caused by placeholder content.
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const caseStudiesData = [
   {
@@ -48,6 +47,22 @@ const caseStudiesData = [
     ],
     ltv: {
         description: "Після успішного сезону клієнт підписав річний контракт на маркетинговий супровід, ставши постійним партнером."
+    }
+  },
+  {
+    title: "Виробник тротуарної плитки 'TerraForma'",
+    clientInfo: { website: "terra-forma.ua" },
+    challenge: "Висока конкуренція, низька маржинальність при роботі з роздрібними клієнтами. Необхідно було вийти на B2B-сегмент: ландшафтних дизайнерів та забудовників.",
+    solution: "Створили візуально привабливу кампанію в Instagram та Pinterest, націлену на архітекторів та дизайнерів. Розробили B2B-пропозицію та лід-форми для отримання каталогів.",
+    imageUrl: "https://images.unsplash.com/photo-1590399435343-16a7db534127?q=80&w=800&auto=format&fit=crop",
+    metrics: [
+        { value: "x7", label: "Окупність (ROMI)" },
+        { value: "350 000 грн", label: "Середній чек" },
+        { value: "50 000 грн", label: "Вартість угоди (CAC)" },
+        { value: "25 днів", label: "Цикл угоди" }
+    ],
+    ltv: {
+        description: "Ключовий ландшафтний дизайнер став постійним клієнтом, розмістивши замовлення для 5 нових проектів протягом року."
     }
   }
 ];
@@ -127,7 +142,7 @@ const CaseStudyModal: React.FC<{ caseStudy: CaseStudy; onClose: () => void }> = 
 };
 
 const CaseStudyCard: React.FC<{ caseStudy: CaseStudy; onOpen: () => void }> = ({ caseStudy, onOpen }) => (
-    <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 group cursor-pointer" onClick={onOpen}>
+    <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 group cursor-pointer h-full" onClick={onOpen}>
         <div className="relative">
             <img src={caseStudy.imageUrl} alt={caseStudy.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center p-4">
@@ -144,6 +159,18 @@ const CaseStudyCard: React.FC<{ caseStudy: CaseStudy; onOpen: () => void }> = ({
 
 const CaseStudies: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+        const { current } = scrollContainerRef;
+        const scrollAmount = current.offsetWidth * 0.9;
+        current.scrollBy({
+            left: direction === 'left' ? -scrollAmount : scrollAmount,
+            behavior: 'smooth',
+        });
+    }
+  };
 
   return (
     <section id="case-studies" className="py-20 bg-gray-800/50">
@@ -155,10 +182,26 @@ const CaseStudies: React.FC = () => {
             *Результати залежать від багатьох факторів, включаючи ринок, сезонність та вашу унікальну пропозицію. Ці кейси демонструють потенціал нашого підходу при тісній співпраці.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudiesData.map((study, index) => (
-            <CaseStudyCard key={index} caseStudy={study} onOpen={() => setSelectedCase(study)} />
-          ))}
+        <div className="relative">
+            <div ref={scrollContainerRef} className="flex overflow-x-auto space-x-8 pb-4 -mx-6 px-6 scrollbar-hide">
+              {caseStudiesData.map((study, index) => (
+                 <div key={index} className="flex-shrink-0 w-11/12 sm:w-1/2 md:w-1/3">
+                    <CaseStudyCard caseStudy={study} onOpen={() => setSelectedCase(study)} />
+                 </div>
+              ))}
+            </div>
+             <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 w-[calc(100%+2rem)] -left-4 justify-between">
+                <button onClick={() => scroll('left')} className="bg-gray-800/50 hover:bg-gray-800 rounded-full p-3 text-white transition-colors duration-300 shadow-lg">
+                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                   </svg>
+                </button>
+                <button onClick={() => scroll('right')} className="bg-gray-800/50 hover:bg-gray-800 rounded-full p-3 text-white transition-colors duration-300 shadow-lg">
+                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                   </svg>
+                </button>
+            </div>
         </div>
       </div>
       {selectedCase && <CaseStudyModal caseStudy={selectedCase} onClose={() => setSelectedCase(null)} />}

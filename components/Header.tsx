@@ -1,17 +1,19 @@
-// FIX: This file was populated with a complete React component to resolve compilation errors caused by placeholder content.
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: '#services', text: 'Послуги' },
-    { href: '#case-studies', text: 'Кейси' },
-    { href: '#how-it-works', text: 'Як працюємо' },
     { href: '#why-us', text: 'Чому ми' },
+    { href: '#how-it-works', text: 'Процес' },
     { href: '#pricing', text: 'Тарифи' },
-    { href: '#faq', text: 'FAQ' },
+    { href: '#case-studies', text: 'Кейси' },
+    { href: '#team', text: 'Команда' },
   ];
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <header className="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
@@ -30,7 +32,7 @@ const Header: React.FC = () => {
           Обговорити проект
         </a>
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 focus:outline-none">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 focus:outline-none z-50 relative">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               {isOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -41,20 +43,19 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      {isOpen && (
-        <div className="md:hidden bg-gray-900">
-          <nav className="flex flex-col items-center space-y-4 px-6 pt-2 pb-6">
+      
+      <div className={`md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+          <nav className="flex flex-col items-center justify-center h-full space-y-8">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2" onClick={() => setIsOpen(false)}>
+              <a key={link.href} href={link.href} className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-2xl" onClick={handleLinkClick}>
                 {link.text}
               </a>
             ))}
-            <a href="#contact" className="w-full text-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 mt-4" onClick={() => setIsOpen(false)}>
+            <a href="#contact" className="w-auto text-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-xl mt-8" onClick={handleLinkClick}>
               Обговорити проект
             </a>
           </nav>
         </div>
-      )}
     </header>
   );
 };
