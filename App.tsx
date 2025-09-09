@@ -1,4 +1,3 @@
-// FIX: Corrected imports for page components to use './pages/...' syntax, resolving module not found errors.
 import React, { useState, useEffect } from 'react';
 
 // Import all page components
