@@ -33,11 +33,23 @@ const App: React.FC = () => {
             const target = e.target as HTMLElement;
             const anchor = target.closest('a');
 
-            if (anchor && anchor.target !== '_blank' && validPaths.includes(anchor.pathname)) {
+            if (!anchor || anchor.target === '_blank') {
+                return;
+            }
+            
+            const url = new URL(anchor.href);
+
+            if (url.origin !== window.location.origin) {
+                return; // External link
+            }
+
+            // If it's a page navigation, prevent default and handle with router
+            if (url.pathname !== window.location.pathname && validPaths.includes(url.pathname)) {
                 e.preventDefault();
                 window.history.pushState({}, '', anchor.href);
                 onLocationChange();
             }
+            // For same-page anchor links, do nothing and let the browser handle it.
         };
 
         window.addEventListener('popstate', onLocationChange);
@@ -49,6 +61,21 @@ const App: React.FC = () => {
         };
     }, []);
 
+    // Scroll handling on path change
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                // Timeout ensures the element is rendered before scrolling
+                setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }), 100);
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [path]);
+
+    // Redirect for invalid paths
     useEffect(() => {
         if (!validPaths.includes(path)) {
             window.history.replaceState({}, '', '/');

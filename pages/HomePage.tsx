@@ -27,7 +27,7 @@ const SegmentCard: React.FC<typeof segments[0]> = ({ title, description, path, e
 const HomePage: React.FC = () => {
     return (
         <div className="bg-gray-900 text-white font-sans">
-            <Header />
+            <Header contactLink="/business-growth#contact" />
             <main>
                 <section className="py-20 md:py-32">
                     <div className="container mx-auto px-6 text-center">
