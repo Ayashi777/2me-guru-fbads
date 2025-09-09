@@ -78,8 +78,8 @@ const ContactForm: React.FC = () => {
         <section id="contact" className="py-20 bg-gray-900">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-extrabold mb-4">Отримайте партнера, а не просто підрядника</h2>
-                    <p className="text-lg text-gray-400 max-w-3xl mx-auto">Заповніть форму, і ми розробимо для вас індивідуальну стратегію залучення клієнтів.</p>
+                    <h2 className="text-4xl font-extrabold mb-4">Дізнайтесь, скільки клієнтів можна залучити у ваш бізнес</h2>
+                    <p className="text-lg text-gray-400 max-w-3xl mx-auto">Заповніть форму, і ми безкоштовно підготуємо для вас прогноз по кількості лідів та вартості їх залучення.</p>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
                     <div className="bg-gray-900 p-8 rounded-xl border border-gray-700">
@@ -104,7 +104,7 @@ const ContactForm: React.FC = () => {
                                     disabled={formStatus === 'loading'}
                                     className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
                                 >
-                                    {formStatus === 'loading' ? 'Відправка...' : 'Отримати безкоштовну консультацію'}
+                                    {formStatus === 'loading' ? 'Розрахунок...' : 'Отримати прогноз по лідах'}
                                 </button>
                                 {formStatus === 'error' && <p className="text-center mt-4 text-red-400">Помилка відправки. Будь ласка, спробуйте ще раз.</p>}
 

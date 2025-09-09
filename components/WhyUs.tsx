@@ -65,8 +65,8 @@ const WhyUs: React.FC = () => {
         <section id="why-us" className="py-20 bg-gray-800/50">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-extrabold mb-4">Не агенція і не фрілансер. Ваш надійний партнер.</h2>
-                    <p className="text-lg text-gray-400 max-w-2xl mx-auto">Ми поєднуємо системність агенції та персональну відповідальність досвідченої команди, щоб гарантувати вам стабільний результат.</p>
+                    <h2 className="text-4xl font-extrabold mb-4">Ми працюємо як ваш внутрішній маркетинговий відділ</h2>
+                    <p className="text-lg text-gray-400 max-w-3xl mx-auto">Повністю занурюємось у ваш бізнес. Жодних шаблонів: для кожної компанії створюємо індивідуальну стратегію залучення клієнтів.</p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl mx-auto">
                     {features.map((feature, index) => (
