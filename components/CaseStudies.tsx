@@ -430,6 +430,13 @@ const CaseStudies: React.FC = () => {
                 </button>
             </div>
         </div>
+        <div className="text-center mt-16">
+            <h3 className="text-2xl font-bold mb-4">Хочете такі ж результати?</h3>
+            <p className="text-gray-400 max-w-xl mx-auto mb-6">Замовте безкоштовний міні-аудит вашої поточної рекламної стратегії та дізнайтесь точки росту для вашого бізнесу.</p>
+            <a href="#contact" className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 inline-block">
+                Отримати міні-аудит рекламних акаунтів
+            </a>
+        </div>
       </div>
       {selectedCase && <CaseStudyModal caseStudy={selectedCase} onClose={() => setSelectedCase(null)} />}
     </section>

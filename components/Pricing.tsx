@@ -56,9 +56,9 @@ const Pricing: React.FC = () => {
         <section id="pricing" className="py-20 bg-gray-900">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-extrabold mb-4">Прозорі тарифи для вашого зростання</h2>
-                    <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                        Оберіть план, який відповідає вашим цілям.
+                    <h2 className="text-4xl font-extrabold mb-4">Який бюджет приносить вам 50–200 заявок щомісяця</h2>
+                    <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                        Оберіть план, який відповідає вашим цілям. Ми пропонуємо гнучкі рішення для залучення клієнтів на ремонт та будівництво.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -87,6 +87,13 @@ const Pricing: React.FC = () => {
                             </a>
                         </div>
                     ))}
+                </div>
+                <div className="text-center mt-16">
+                    <h3 className="text-2xl font-bold mb-4">Не впевнені, який тариф обрати?</h3>
+                    <p className="text-gray-400 max-w-xl mx-auto mb-6">Отримайте безкоштовний розрахунок вартості ліда та прогноз окупності інвестицій саме для вашої ніші.</p>
+                    <a href="#contact" className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 inline-block">
+                        Отримати прогноз CPL для моєї ніші
+                    </a>
                 </div>
             </div>
         </section>

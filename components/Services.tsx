@@ -33,8 +33,8 @@ const Services: React.FC = () => {
     <section id="services" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold mb-4">Наш підхід до залучення клієнтів</h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">Ми використовуємо перевірені інструменти для генерації якісних заявок у будівельній ніші.</p>
+          <h2 className="text-4xl font-extrabold mb-4">Три канали, які реально приводять контракти</h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">Це три ключові інструменти, які ми використовуємо для залучення лідів для будівельних компаній. Наша мета — побудувати ефективний маркетинг для вашого будівельного бізнесу.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
