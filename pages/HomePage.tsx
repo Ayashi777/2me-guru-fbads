@@ -23,13 +23,19 @@ const SegmentCard: React.FC<typeof segments[0]> = ({ title, description, path, e
     </a>
 );
 
+const navLinks = [
+    { href: "/business-growth", label: "Для Власників" },
+    { href: "/marketing-pro", label: "Для Маркетологів" },
+    { href: "/b2b-partners", label: "B2B" },
+    { href: "#solutions", label: "Усі рішення" }
+];
 
 const HomePage: React.FC = () => {
     return (
         <div className="bg-gray-900 text-white font-sans">
-            <Header contactLink="/business-growth#contact" />
+            <Header contactLink="/business-growth#contact" navLinks={navLinks} />
             <main>
-                <section className="py-20 md:py-32">
+                <section className="py-20 md:py-32" id="solutions">
                     <div className="container mx-auto px-6 text-center">
                         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
                             Результативний маркетинг для <span className="text-cyan-400">будівельного бізнесу</span>
