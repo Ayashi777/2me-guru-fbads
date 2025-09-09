@@ -1,21 +1,21 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/v1/Header';
+import Footer from '../components/v1/Footer';
 
 // V1 Components
 import Hero from '../components/HeroV1';
-import TrustBadgesV1 from '../components/TrustBadgesV1';
-import HowItWorksV1 from '../components/HowItWorksV1';
-import ServicesV1 from '../components/ServicesV1';
-import PricingV1 from '../components/PricingV1';
-import CaseStudiesV1 from '../components/CaseStudiesV1';
-import RoiCalculatorV1 from '../components/RoiCalculatorV1';
-import FAQV1 from '../components/FAQV1';
-import ContactFormV1 from '../components/ContactFormV1';
-import WhyUs from '../components/WhyUs';
-import CostComparison from '../components/CostComparison';
-import Testimonials from '../components/Testimonials';
-import Team from '../components/Team';
+import TrustBadges from '../components/TrustBadgesV1';
+import HowItWorks from '../components/HowItWorksV1';
+import Services from '../components/ServicesV1';
+import Pricing from '../components/PricingV1';
+import CaseStudies from '../components/CaseStudiesV1';
+import RoiCalculator from '../components/RoiCalculatorV1';
+import FAQ from '../components/FAQV1';
+import ContactForm from '../components/ContactFormV1';
+import WhyUs from '../components/v1/WhyUs';
+import CostComparison from '../components/v1/CostComparison';
+import Testimonials from '../components/v1/Testimonials';
+import Team from '../components/v1/Team';
 
 const navLinks = [
     { href: "#services", label: "Послуги" },
@@ -32,18 +32,18 @@ const MarketingProPage: React.FC = () => {
       <Header navLinks={navLinks} ctaText="Замовити консультацію" />
       <main>
         <Hero />
-        <TrustBadgesV1 />
+        <TrustBadges />
         <WhyUs />
-        <HowItWorksV1 />
-        <ServicesV1 />
-        <PricingV1 />
+        <HowItWorks />
+        <Services />
+        <Pricing />
         <CostComparison />
-        <CaseStudiesV1 />
+        <CaseStudies />
         <Testimonials />
         <Team />
-        <RoiCalculatorV1 />
-        <FAQV1 />
-        <ContactFormV1 />
+        <RoiCalculator />
+        <FAQ />
+        <ContactForm />
       </main>
       <Footer footerNavLinks={navLinks} />
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/v1/Header';
+import Footer from '../components/v1/Footer';
 
 // V7 Components
 import Hero from '../components/HeroV7';
@@ -8,7 +8,7 @@ import InvestorBenefitsV7 from '../components/InvestorBenefitsV7';
 import BeforeAfterV7 from '../components/BeforeAfterV7';
 import ProcessV7 from '../components/ProcessV7';
 import ContactFormV7 from '../components/ContactFormV7';
-import Team from '../components/Team';
+import Team from '../components/v1/Team';
 
 const navLinks = [
     { href: "#benefits", label: "Переваги" },

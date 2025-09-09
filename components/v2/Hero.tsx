@@ -1,5 +1,5 @@
 import React from 'react';
-import { InstagramIcon, FacebookIcon, TikTokIcon } from './icons/SocialIcons';
+import { InstagramIcon, FacebookIcon, TikTokIcon } from '../icons/SocialIcons';
 
 const HeroV2: React.FC = () => {
   return (

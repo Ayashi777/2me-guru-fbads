@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { trackConversion } from '../utils/analytics';
+import { trackConversion } from '../../utils/analytics';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 

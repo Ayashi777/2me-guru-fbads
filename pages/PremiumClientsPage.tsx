@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/v1/Header';
+import Footer from '../components/v1/Footer';
 
 // V6 Components
 import Hero from '../components/HeroV6';
@@ -8,7 +8,7 @@ import PhilosophyV6 from '../components/PhilosophyV6';
 import ApproachV6 from '../components/ApproachV6';
 import PortfolioV6 from '../components/PortfolioV6';
 import ContactFormV6 from '../components/ContactFormV6';
-import Team from '../components/Team';
+import Team from '../components/v1/Team';
 
 const navLinks = [
     { href: "#philosophy", label: "Філософія" },

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/v1/Header';
+import Footer from '../components/v1/Footer';
 
 // V5 Components
 import Hero from '../components/HeroV5';
@@ -9,8 +9,8 @@ import OurPromiseV5 from '../components/OurPromiseV5';
 import HowItWorksV5 from '../components/HowItWorksV5';
 import PricingV5 from '../components/PricingV5';
 import ContactFormV5 from '../components/ContactFormV5';
-import CaseStudiesV2 from '../components/CaseStudiesV2';
-import Team from '../components/Team';
+import CaseStudies from '../components/v2/CaseStudies';
+import Team from '../components/v1/Team';
 
 const navLinks = [
     { href: "#pain-points", label: "Проблеми" },
@@ -30,7 +30,7 @@ const OurPromisePage: React.FC = () => {
         <PainPointsV5 />
         <OurPromiseV5 />
         <HowItWorksV5 />
-        <CaseStudiesV2 />
+        <CaseStudies />
         <PricingV5 />
         <Team />
         <ContactFormV5 />

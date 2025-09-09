@@ -1,51 +1,45 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/v1/Header';
+import Footer from '../components/v1/Footer';
 
 // V2 Components
-import Hero from '../components/HeroV2';
-import TrustBadgesV2 from '../components/TrustBadgesV2';
-import HowItWorksV2 from '../components/HowItWorksV2';
-import ServicesV2 from '../components/ServicesV2';
-import PricingV2 from '../components/PricingV2';
-import CaseStudiesV2 from '../components/CaseStudiesV2';
-import RoiCalculatorV2 from '../components/RoiCalculatorV2';
-import FAQV2 from '../components/FAQV2';
-import ContactFormV2 from '../components/ContactFormV2';
-import WhyUs from '../components/WhyUs';
-import CostComparison from '../components/CostComparison';
-import Testimonials from '../components/Testimonials';
-import Team from '../components/Team';
+import Hero from '../components/v2/Hero';
+import TrustBadges from '../components/v2/TrustBadges';
+import HowItWorks from '../components/v2/HowItWorks';
+import Services from '../components/v2/Services';
+import Pricing from '../components/v2/Pricing';
+import CaseStudies from '../components/v2/CaseStudies';
+import RoiCalculator from '../components/v2/RoiCalculator';
+import FAQ from '../components/v2/FAQ';
+import ContactForm from '../components/v2/ContactForm';
 
-const navLinks = [
-    { href: "#services", label: "Приклади" },
-    { href: "#how-it-works", label: "Процес" },
-    { href: "#case-studies", label: "Кейси" },
-    { href: "#pricing", label: "Тарифи" },
-    { href: "#roi-calculator", label: "ROI" },
-    { href: "#why-us", label: "Переваги" },
-];
+import WhyUs from '../components/v1/WhyUs';
+import CostComparison from '../components/v1/CostComparison';
+import Testimonials from '../components/v1/Testimonials';
+import Team from '../components/v1/Team';
+
+import { siteConfig } from '../config/site';
 
 const BusinessGrowthPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} ctaText="Розрахувати прибуток" />
+      <Header navLinks={siteConfig.navLinks} ctaText="Розрахувати прибуток" />
       <main>
         <Hero />
-        <TrustBadgesV2 />
+        <TrustBadges />
         <WhyUs />
-        <HowItWorksV2 />
-        <ServicesV2 />
-        <PricingV2 />
+        <HowItWorks />
+        <Services />
+        <Pricing />
         <CostComparison />
-        <CaseStudiesV2 />
+        <CaseStudies />
         <Testimonials />
         <Team />
-        <RoiCalculatorV2 />
-        <FAQV2 />
-        <ContactFormV2 />
+        <RoiCalculator />
+        <FAQ />
+        <ContactForm />
       </main>
-      <Footer footerNavLinks={navLinks} />
+      <Footer footerNavLinks={siteConfig.navLinks} />
     </div>
   );
 };

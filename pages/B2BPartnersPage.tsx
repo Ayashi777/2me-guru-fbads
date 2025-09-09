@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/v1/Header';
+import Footer from '../components/v1/Footer';
 
 // V4 Components
 import Hero from '../components/HeroV4';
@@ -9,7 +9,7 @@ import HowItWorksV4 from '../components/HowItWorksV4';
 import ServicesV4 from '../components/ServicesV4';
 import ContactFormV4 from '../components/ContactFormV4';
 import CaseStudiesV1 from '../components/CaseStudiesV1';
-import Team from '../components/Team';
+import Team from '../components/v1/Team';
 
 const navLinks = [
     { href: "#trust-badges", label: "Підхід" },
