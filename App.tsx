@@ -27,8 +27,10 @@ import ContactFormV2 from './components/ContactFormV2';
 import HeroV3 from './components/HeroV3';
 import WorkExamples from './components/WorkExamples';
 import OfferV3 from './components/OfferV3';
-import ExpectedResultsV3 from './components/ExpectedResultsV3';
 import ContactFormV3 from './components/ContactFormV3';
+import TrustBadgesV3 from './components/TrustBadgesV3';
+import ProfitCalculatorV3 from './components/ProfitCalculatorV3';
+import TeamV3 from './components/TeamV3';
 
 
 // Shared Components
@@ -83,8 +85,10 @@ const App: React.FC = () => {
     <>
       <HeroV3 />
       <WorkExamples />
+      <TrustBadgesV3 />
       <OfferV3 />
-      <ExpectedResultsV3 />
+      <ProfitCalculatorV3 />
+      <TeamV3 />
       <ContactFormV3 />
     </>
   );
