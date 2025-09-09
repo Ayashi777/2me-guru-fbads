@@ -1,7 +1,25 @@
 import React from 'react';
 import { InstagramIcon, FacebookIcon, TikTokIcon } from './icons/SocialIcons';
 
-const Footer: React.FC = () => {
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface FooterProps {
+  footerNavLinks?: NavLink[];
+}
+
+const defaultNavLinks = [
+    { href: "/business-growth", label: "Для Власників" },
+    { href: "/marketing-pro", label: "Для Маркетологів" },
+    { href: "/quick-start", label: "Для Прорабів" },
+    { href: "/premium-clients", label: "Luxury-сегмент" },
+];
+
+const Footer: React.FC<FooterProps> = ({ footerNavLinks = defaultNavLinks }) => {
+  const isDefaultLinks = footerNavLinks === defaultNavLinks;
+
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
@@ -20,12 +38,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div>
-             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Для кого</h3>
+             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">{isDefaultLinks ? "Для кого" : "Навігація"}</h3>
              <ul className="mt-4 space-y-2">
-                <li><a href="/business-growth" className="text-gray-400 hover:text-cyan-400">Для Власників</a></li>
-                <li><a href="/marketing-pro" className="text-gray-400 hover:text-cyan-400">Для Маркетологів</a></li>
-                <li><a href="/quick-start" className="text-gray-400 hover:text-cyan-400">Для Прорабів</a></li>
-                <li><a href="/premium-clients" className="text-gray-400 hover:text-cyan-400">Luxury-сегмент</a></li>
+                {footerNavLinks.map(link => (
+                    <li key={link.href}><a href={link.href} className="text-gray-400 hover:text-cyan-400">{link.label}</a></li>
+                ))}
              </ul>
           </div>
           <div>

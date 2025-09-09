@@ -8,9 +8,10 @@ interface NavLink {
 interface HeaderProps {
   contactLink?: string;
   navLinks?: NavLink[];
+  ctaText?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ contactLink = "#contact", navLinks }) => {
+const Header: React.FC<HeaderProps> = ({ contactLink = "#contact", navLinks, ctaText = "Обговорити проект" }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -37,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ contactLink = "#contact", navLinks }) =
         {/* Right Side */}
         <div className="flex-1 lg:flex-none lg:w-1/3 flex justify-end items-center">
             <a href={contactLink} className="hidden md:inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300 hover:scale-105">
-              Обговорити проект
+              {ctaText}
             </a>
 
             {navLinks && navLinks.length > 0 ? (
@@ -64,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ contactLink = "#contact", navLinks }) =
               </a>
             ))}
              <a href={contactLink} onClick={() => setIsMenuOpen(false)} className="w-full mt-4 text-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                Обговорити проект
+                {ctaText}
             </a>
           </div>
         </div>

@@ -20,7 +20,7 @@ const navLinks = [
 const InvestmentROIPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Отримати пропозицію" />
       <main>
         <HeroV7 />
         <InvestorBenefitsV7 />
@@ -29,7 +29,7 @@ const InvestmentROIPage: React.FC = () => {
         <Team />
         <ContactFormV7 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };

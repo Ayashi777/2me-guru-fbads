@@ -22,7 +22,7 @@ const navLinks = [
 const B2BPartnersPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Запланувати сесію" />
       <main>
         <HeroV4 />
         <TrustBadgesV4 />
@@ -32,7 +32,7 @@ const B2BPartnersPage: React.FC = () => {
         <Team />
         <ContactFormV4 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };

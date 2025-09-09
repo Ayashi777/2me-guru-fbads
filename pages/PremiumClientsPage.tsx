@@ -20,7 +20,7 @@ const navLinks = [
 const PremiumClientsPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Замовити консультацію" />
       <main>
         <HeroV6 />
         <PhilosophyV6 />
@@ -29,7 +29,7 @@ const PremiumClientsPage: React.FC = () => {
         <Team />
         <ContactFormV6 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const navLinks = [
 const MarketingProPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Замовити консультацію" />
       <main>
         <HeroV1 />
         <TrustBadgesV1 />
@@ -45,7 +45,7 @@ const MarketingProPage: React.FC = () => {
         <FAQV1 />
         <ContactFormV1 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };

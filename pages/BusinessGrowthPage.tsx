@@ -29,7 +29,7 @@ const navLinks = [
 const BusinessGrowthPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Розрахувати прибуток" />
       <main>
         <HeroV2 />
         <TrustBadgesV2 />
@@ -45,7 +45,7 @@ const BusinessGrowthPage: React.FC = () => {
         <FAQV2 />
         <ContactFormV2 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };

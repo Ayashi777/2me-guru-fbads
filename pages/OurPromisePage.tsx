@@ -24,7 +24,7 @@ const navLinks = [
 const OurPromisePage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Отримати аудит" />
       <main>
         <HeroV5 />
         <PainPointsV5 />
@@ -35,7 +35,7 @@ const OurPromisePage: React.FC = () => {
         <Team />
         <ContactFormV5 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };

@@ -22,7 +22,7 @@ const navLinks = [
 const QuickStartPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header navLinks={navLinks} />
+      <Header navLinks={navLinks} ctaText="Спробувати тест" />
       <main>
         <HeroV3 />
         <WorkExamples />
@@ -32,7 +32,7 @@ const QuickStartPage: React.FC = () => {
         <TeamV3 />
         <ContactFormV3 />
       </main>
-      <Footer />
+      <Footer footerNavLinks={navLinks} />
     </div>
   );
 };
