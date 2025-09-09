@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
           <div className="lg:col-span-2">
-            <a href="#" className="text-2xl font-bold text-white inline-block">
+            <a href="/" className="text-2xl font-bold text-white inline-block">
               2Me<span className="text-cyan-400">Guru</span>
             </a>
             <p className="mt-4 text-gray-400 text-sm max-w-md mx-auto md:mx-0">
@@ -20,11 +20,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div>
-             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Навігація</h3>
+             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Для кого</h3>
              <ul className="mt-4 space-y-2">
-                <li><a href="#why-us" className="text-gray-400 hover:text-cyan-400">Чому ми</a></li>
-                <li><a href="#case-studies" className="text-gray-400 hover:text-cyan-400">Кейси</a></li>
-                <li><a href="#pricing" className="text-gray-400 hover:text-cyan-400">Тарифи</a></li>
+                <li><a href="/business-growth" className="text-gray-400 hover:text-cyan-400">Для Власників</a></li>
+                <li><a href="/marketing-pro" className="text-gray-400 hover:text-cyan-400">Для Маркетологів</a></li>
+                <li><a href="/quick-start" className="text-gray-400 hover:text-cyan-400">Для Прорабів</a></li>
+                <li><a href="/premium-clients" className="text-gray-400 hover:text-cyan-400">Luxury-сегмент</a></li>
              </ul>
           </div>
           <div>
