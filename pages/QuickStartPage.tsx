@@ -13,6 +13,7 @@ import TeamV3 from '../components/TeamV3';
 
 const navLinks = [
     { href: "#work-examples", label: "Приклади" },
+    { href: "#trust-badges", label: "Умови" },
     { href: "#offer", label: "Пропозиція" },
     { href: "#profit-calculator", label: "Калькулятор" },
     { href: "#team", label: "Команда" }

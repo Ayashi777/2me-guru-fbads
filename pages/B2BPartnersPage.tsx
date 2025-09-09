@@ -12,6 +12,7 @@ import CaseStudiesV1 from '../components/CaseStudiesV1';
 import Team from '../components/Team';
 
 const navLinks = [
+    { href: "#trust-badges", label: "Підхід" },
     { href: "#how-it-works", label: "Процес" },
     { href: "#services", label: "Для кого" },
     { href: "#case-studies", label: "Кейси" },

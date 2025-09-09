@@ -15,8 +15,10 @@ import Team from '../components/Team';
 const navLinks = [
     { href: "#pain-points", label: "Проблеми" },
     { href: "#our-promise", label: "Наша обіцянка" },
+    { href: "#how-it-works", label: "Процес" },
     { href: "#pricing", label: "Пропозиція" },
-    { href: "#case-studies", label: "Кейси" }
+    { href: "#case-studies", label: "Кейси" },
+    { href: "#team", label: "Команда" }
 ];
 
 const OurPromisePage: React.FC = () => {

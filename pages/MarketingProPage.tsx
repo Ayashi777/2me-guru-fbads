@@ -19,10 +19,11 @@ import Team from '../components/Team';
 
 const navLinks = [
     { href: "#services", label: "Послуги" },
+    { href: "#how-it-works", label: "Процес" },
     { href: "#case-studies", label: "Кейси" },
     { href: "#pricing", label: "Тарифи" },
+    { href: "#roi-calculator", label: "Калькулятор" },
     { href: "#why-us", label: "Чому ми" },
-    { href: "#faq", label: "FAQ" }
 ];
 
 const MarketingProPage: React.FC = () => {
