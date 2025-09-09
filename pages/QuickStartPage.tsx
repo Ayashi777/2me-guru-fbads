@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // V3 Components
-import HeroV3 from '../components/HeroV3';
+import Hero from '../components/HeroV3';
 import WorkExamples from '../components/WorkExamples';
 import OfferV3 from '../components/OfferV3';
 import ContactFormV3 from '../components/ContactFormV3';
@@ -24,7 +24,7 @@ const QuickStartPage: React.FC = () => {
     <div className="bg-gray-900 text-white font-sans">
       <Header navLinks={navLinks} ctaText="Спробувати тест" />
       <main>
-        <HeroV3 />
+        <Hero />
         <WorkExamples />
         <TrustBadgesV3 />
         <OfferV3 />

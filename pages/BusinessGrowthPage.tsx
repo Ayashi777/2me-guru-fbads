@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // V2 Components
-import HeroV2 from '../components/HeroV2';
+import Hero from '../components/HeroV2';
 import TrustBadgesV2 from '../components/TrustBadgesV2';
 import HowItWorksV2 from '../components/HowItWorksV2';
 import ServicesV2 from '../components/ServicesV2';
@@ -31,7 +31,7 @@ const BusinessGrowthPage: React.FC = () => {
     <div className="bg-gray-900 text-white font-sans">
       <Header navLinks={navLinks} ctaText="Розрахувати прибуток" />
       <main>
-        <HeroV2 />
+        <Hero />
         <TrustBadgesV2 />
         <WhyUs />
         <HowItWorksV2 />

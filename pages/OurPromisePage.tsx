@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // V5 Components
-import HeroV5 from '../components/HeroV5';
+import Hero from '../components/HeroV5';
 import PainPointsV5 from '../components/PainPointsV5';
 import OurPromiseV5 from '../components/OurPromiseV5';
 import HowItWorksV5 from '../components/HowItWorksV5';
@@ -26,7 +26,7 @@ const OurPromisePage: React.FC = () => {
     <div className="bg-gray-900 text-white font-sans">
       <Header navLinks={navLinks} ctaText="Отримати аудит" />
       <main>
-        <HeroV5 />
+        <Hero />
         <PainPointsV5 />
         <OurPromiseV5 />
         <HowItWorksV5 />

@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // V7 Components
-import HeroV7 from '../components/HeroV7';
+import Hero from '../components/HeroV7';
 import InvestorBenefitsV7 from '../components/InvestorBenefitsV7';
 import BeforeAfterV7 from '../components/BeforeAfterV7';
 import ProcessV7 from '../components/ProcessV7';
@@ -22,7 +22,7 @@ const InvestmentROIPage: React.FC = () => {
     <div className="bg-gray-900 text-white font-sans">
       <Header navLinks={navLinks} ctaText="Отримати пропозицію" />
       <main>
-        <HeroV7 />
+        <Hero />
         <InvestorBenefitsV7 />
         <BeforeAfterV7 />
         <ProcessV7 />

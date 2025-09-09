@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // V1 Components
-import HeroV1 from '../components/HeroV1';
+import Hero from '../components/HeroV1';
 import TrustBadgesV1 from '../components/TrustBadgesV1';
 import HowItWorksV1 from '../components/HowItWorksV1';
 import ServicesV1 from '../components/ServicesV1';
@@ -31,7 +31,7 @@ const MarketingProPage: React.FC = () => {
     <div className="bg-gray-900 text-white font-sans">
       <Header navLinks={navLinks} ctaText="Замовити консультацію" />
       <main>
-        <HeroV1 />
+        <Hero />
         <TrustBadgesV1 />
         <WhyUs />
         <HowItWorksV1 />

@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // V4 Components
-import HeroV4 from '../components/HeroV4';
+import Hero from '../components/HeroV4';
 import TrustBadgesV4 from '../components/TrustBadgesV4';
 import HowItWorksV4 from '../components/HowItWorksV4';
 import ServicesV4 from '../components/ServicesV4';
@@ -24,7 +24,7 @@ const B2BPartnersPage: React.FC = () => {
     <div className="bg-gray-900 text-white font-sans">
       <Header navLinks={navLinks} ctaText="Запланувати сесію" />
       <main>
-        <HeroV4 />
+        <Hero />
         <TrustBadgesV4 />
         <HowItWorksV4 />
         <ServicesV4 />
