@@ -17,10 +17,18 @@ import CostComparison from '../components/CostComparison';
 import Testimonials from '../components/Testimonials';
 import Team from '../components/Team';
 
+const navLinks = [
+    { href: "#services", label: "Послуги" },
+    { href: "#case-studies", label: "Кейси" },
+    { href: "#pricing", label: "Тарифи" },
+    { href: "#why-us", label: "Чому ми" },
+    { href: "#faq", label: "FAQ" }
+];
+
 const MarketingProPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header />
+      <Header navLinks={navLinks} />
       <main>
         <HeroV1 />
         <TrustBadgesV1 />

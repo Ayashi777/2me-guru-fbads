@@ -11,10 +11,17 @@ import ContactFormV4 from '../components/ContactFormV4';
 import CaseStudiesV1 from '../components/CaseStudiesV1';
 import Team from '../components/Team';
 
+const navLinks = [
+    { href: "#how-it-works", label: "Процес" },
+    { href: "#services", label: "Для кого" },
+    { href: "#case-studies", label: "Кейси" },
+    { href: "#team", label: "Команда" }
+];
+
 const B2BPartnersPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header />
+      <Header navLinks={navLinks} />
       <main>
         <HeroV4 />
         <TrustBadgesV4 />

@@ -12,10 +12,17 @@ import ContactFormV5 from '../components/ContactFormV5';
 import CaseStudiesV2 from '../components/CaseStudiesV2';
 import Team from '../components/Team';
 
+const navLinks = [
+    { href: "#pain-points", label: "Проблеми" },
+    { href: "#our-promise", label: "Наша обіцянка" },
+    { href: "#pricing", label: "Пропозиція" },
+    { href: "#case-studies", label: "Кейси" }
+];
+
 const OurPromisePage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header />
+      <Header navLinks={navLinks} />
       <main>
         <HeroV5 />
         <PainPointsV5 />

@@ -10,10 +10,17 @@ import PortfolioV6 from '../components/PortfolioV6';
 import ContactFormV6 from '../components/ContactFormV6';
 import Team from '../components/Team';
 
+const navLinks = [
+    { href: "#philosophy", label: "Філософія" },
+    { href: "#approach", label: "Підхід" },
+    { href: "#portfolio", label: "Портфоліо" },
+    { href: "#team", label: "Команда" }
+];
+
 const PremiumClientsPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header />
+      <Header navLinks={navLinks} />
       <main>
         <HeroV6 />
         <PhilosophyV6 />

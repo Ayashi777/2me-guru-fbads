@@ -11,10 +11,17 @@ import TrustBadgesV3 from '../components/TrustBadgesV3';
 import ProfitCalculatorV3 from '../components/ProfitCalculatorV3';
 import TeamV3 from '../components/TeamV3';
 
+const navLinks = [
+    { href: "#work-examples", label: "Приклади" },
+    { href: "#offer", label: "Пропозиція" },
+    { href: "#profit-calculator", label: "Калькулятор" },
+    { href: "#team", label: "Команда" }
+];
+
 const QuickStartPage: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white font-sans">
-      <Header />
+      <Header navLinks={navLinks} />
       <main>
         <HeroV3 />
         <WorkExamples />
